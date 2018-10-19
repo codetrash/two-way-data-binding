@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+      <meta charset="UTF-8">
+      <title>Two Way Data Binding</title>
+    <style>
+      pre{ white-space: pre-line ; display: block; unicode-bidi: embed }
+    </style>
+  </head>
+  <body>
+    Qty: <input data-model="qty" type="text">
+    <span data-model="qty"></span>
+    <hr />
+    Price: <input data-model="price"type="text">
+    <span data-model="price"></span>
+    <hr />
+    Total: <input data-model="total" type="text">
+    <span data-model="total"></span>
+    <hr />
+    Gratis: <input data-model="gratis" type="checkbox">
+    <span data-model="check"></span>
+    <hr />
+    Grade: <select data-model="grade">
+      <option value="">pilih grade</option>
+      <option value="A">A</option>
+      <option value="B">B</option>
+    </select>
+    <span data-model="option"></span>
+    <hr />
+    Gender: 
+    <input type="radio" name="gender" data-model="gender" value="L"> L
+    <input type="radio" name="gender" data-model="gender" value="P"> P
+    <pre id="scope"></pre>
+    <script src="app.js"></script>
+  </body>
+</html>
