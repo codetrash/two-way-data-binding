@@ -7,6 +7,12 @@ https://jsbin.com/sasigaxine/1/edit?html,js,output
 
 # usage
 
+include script 
+
+```
+<script src="app.js"></script>
+```
+
 ```
 var bind = new Binding('data-model');
 
