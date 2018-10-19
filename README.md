@@ -1,2 +1,22 @@
 # two-way-data-binding
 Simple Two-Way Data Binding in Vanilla Javascript
+
+# Demo
+
+https://jsbin.com/sasigaxine/1/edit?html,js,output 
+
+# usage
+
+```
+var bind = new Binding('data-model');
+
+// usage
+// bind.run();
+
+// with callback
+bind.run(function(scope) {
+  // display model somewhere
+  document.getElementById('scope')
+    .innerHTML = JSON.stringify(scope, null, 5);
+});
+```
