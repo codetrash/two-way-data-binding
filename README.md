@@ -25,4 +25,11 @@ bind.run(function(scope) {
   document.getElementById('scope')
     .innerHTML = JSON.stringify(scope, null, 5);
 });
+
+
+// get current scope
+bind.getCurrentScope();
+
+// set scope via js code
+bind.setScope({qty: 2, price: 2000});
 ```
