@@ -23,7 +23,7 @@ var bind = new Binding('data-model');
 bind.run(function(scope) {
   // display model somewhere
   document.getElementById('scope')
-    .innerHTML = JSON.stringify(scope, null, 5);
+    .innerHTML = JSON.stringify(scope, null, 5); // pretty print
 });
 
 // get current scope object
