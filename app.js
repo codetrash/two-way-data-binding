@@ -17,7 +17,7 @@ function Binding(selector, scope) {
       keyup: ['text', 'textarea'],
       change: ['select-one', 'radio', 'checkbox']
     };
-   
+
 }
 
 // run it
@@ -29,7 +29,7 @@ Binding.prototype.run = function(next) {
       elements.forEach(function(element) {
         //execute scope setter
         if (self.allowedInputs.indexOf(element.type) > -1 ) {
-          var propToBind = element.getAttribute(self.selector);  
+          var propToBind = element.getAttribute(self.selector);
           // set property scope, except radio buttons..they need special treatment
           if (element.type !== 'radio') {
             self.addScopeProp(elements, propToBind);
@@ -37,26 +37,26 @@ Binding.prototype.run = function(next) {
            // on Events
            Object.keys(self.allowedAventsPair).forEach(function(event) {
              // check if input type is part of current event
-             if (self.allowedAventsPair[event].indexOf(element.type) > -1) {              
+             if (self.allowedAventsPair[event].indexOf(element.type) > -1) {
                // execute event
-               element.addEventListener(event, function(e) {               
+               element.addEventListener(event, function(e) {
                  var nval = element.value;
                  if (element.type === 'checkbox') {
                    if (e.target.checked) {
                      nval = 'on';
                    } else {
                      nval = 'off';
-                   }                   
+                   }
                  }
                  // add to scope
                  self.scope[propToBind] = nval;
                  // special for radio input, must add scope from here
                  // as radio utilize same-name property
                  if (element.type === 'radio') {
-                   // add prop to current scope       
+                   // add prop to current scope
                    self.addScopeProp(elements, propToBind);
                  }
-          
+
                  return next(self.scope);
                });
              }
@@ -98,7 +98,7 @@ Binding.prototype.addScopeProp = function(elements, prop) {
   }
 };
 
-// set scope manually 
+// set scope manually
 // @param {string} prop property
 Binding.prototype.setScope = function(prop) {
   var self = this;
@@ -119,9 +119,8 @@ var bind = new Binding('data-model');
 // usage
 // bind.run();
 
-// with callback
+// or run with callback
 bind.run(function(scope) {
   document.getElementById('scope')
     .innerHTML = JSON.stringify(scope);
 });
-

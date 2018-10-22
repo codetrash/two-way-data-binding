@@ -3,11 +3,11 @@ Simple Two-Way Data Binding in Vanilla Javascript
 
 # Demo
 
-https://jsbin.com/sasigaxine/1/edit?html,js,output 
+https://jsbin.com/sasigaxine/1/edit?html,js,output
 
 # usage
 
-include script 
+include script
 
 ```
 <script src="app.js"></script>
@@ -26,7 +26,7 @@ bind.run(function(scope) {
     .innerHTML = JSON.stringify(scope, null, 5);
 });
 
-// get current scope
+// get current scope object
 bind.getScope();
 
 // set scope manually
