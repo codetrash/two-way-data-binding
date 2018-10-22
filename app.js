@@ -122,5 +122,5 @@ var bind = new Binding('data-model');
 // or run with callback
 bind.run(function(scope) {
   document.getElementById('scope')
-    .innerHTML = JSON.stringify(scope);
+    .innerHTML = JSON.stringify(scope, null, 2);
 });
