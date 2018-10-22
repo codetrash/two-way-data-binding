@@ -4,7 +4,9 @@
 // @todo add expression, callback-prop
 
 function Binding(selector, scope) {
+    // the attribute to bind
     this.selector = selector || 'model';
+    // scope
     this.scope = scope || {};
     // list allowed input type
     this.allowedInputs = [
@@ -111,6 +113,7 @@ Binding.prototype.getScope = function() {
   return this.scope;
 };
 
+// create instance
 var bind = new Binding('data-model');
 
 // usage
