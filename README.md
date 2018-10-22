@@ -26,10 +26,10 @@ bind.run(function(scope) {
     .innerHTML = JSON.stringify(scope, null, 5);
 });
 
-
 // get current scope
-bind.getCurrentScope();
+bind.getScope();
 
-// set scope via js code
-bind.setScope({qty: 2, price: 2000});
+// set scope manually
+bind.setScope({ qty: 2, price: 2000 });
+
 ```
