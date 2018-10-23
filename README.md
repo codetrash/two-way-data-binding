@@ -32,12 +32,11 @@ bind.getScope();
 // set scope manually
 bind.setScope({ qty: 2, price: 2000 });
 
-// or simple
-
+// or simply
 bind.scope.qty = 2;
 bind.scope.price = 3;
 
-// set scope inside event
+// set scope inside function on event
 function doThat() {
   bind.scope.qty = 2;
   bind.scope.price = 3;
