@@ -3,7 +3,7 @@ Simple Two-Way Data Binding in Vanilla Javascript
 
 # Demo
 
-https://jsbin.com/sasigaxine/1/edit?html,js,output
+https://jsbin.com/zaponuv/edit?html,js,output
 
 # usage
 
@@ -32,4 +32,14 @@ bind.getScope();
 // set scope manually
 bind.setScope({ qty: 2, price: 2000 });
 
+// or simple
+
+bind.scope.qty = 2;
+bind.scope.price = 3;
+
+// set scope inside event
+function doThat() {
+  bind.scope.qty = 2;
+  bind.scope.price = 3;
+}
 ```
