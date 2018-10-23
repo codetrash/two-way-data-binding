@@ -37,7 +37,7 @@ bind.scope.qty = 2;
 bind.scope.price = 3;
 
 // set scope inside function on event
-function doThat() {
+function onClickEvent() {
   bind.scope.qty = 2;
   bind.scope.price = 3;
 }
